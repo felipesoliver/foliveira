@@ -15,8 +15,9 @@ module.exports = {
       },
       transparent: 'transparent',
       black: '#000',
-      white: '#fff',
-
+      white: '#FFF',
+      gray: '#565656',
+      purple: '#831ED2',
     },
     screens: {
       sm: '440px',
@@ -37,9 +38,25 @@ module.exports = {
             opacity: '1',
           },
         },
+        fadeleft: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateX(30px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateX(0)',
+          },
+        },
       },
       animation: {
-        fadein: 'fadein .3s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards',
+        fadein: 'fadein .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards',
+        'fade-in-two':
+          'fadein .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards .4s',
+        'fade-left':
+          'fadeleft .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards',
+        'fade-left-two':
+          'fadeleft .7s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards .4s',
       },
       fontFamily: {
         manrope: ['var(--font-manrope)', ...fontFamily.sans],

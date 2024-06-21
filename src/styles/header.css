@@ -1,0 +1,17 @@
+/* Header */
+
+.header {
+  @apply fixed top-0 left-0 z-[9999] w-full h-20 lg:h-28  flex items-center border-b;
+}
+
+.header-wrapper {
+  @apply relative flex items-center justify-between;
+}
+
+.phrase {
+  @apply flex-col items-center absolute top-1/2 -translate-y-1/2 left-1/2 w-1/4;
+}
+
+.phrase p {
+  @apply w-fit text-gray opacity-70;
+}

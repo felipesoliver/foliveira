@@ -1,0 +1,35 @@
+.heading-xl {
+  @apply text-[1.125rem] lg:text-[1.389vw] font-vollkorn;
+}
+
+.heading-2xl {
+  @apply text-[1.25rem] lg:text-[1.667vw] font-vollkorn;
+}
+
+.heading-3xl {
+  @apply text-[1.5rem] lg:text-[2.083vw] font-vollkorn;
+}
+
+.heading-4xl {
+  @apply text-[2rem] lg:text-[2.5vw] font-vollkorn;
+}
+
+.heading-5xl {
+  @apply text-[2.25rem] lg:text-[3.333vw] font-vollkorn;
+}
+
+.heading-6xl {
+  @apply text-[2.5rem] lg:text-[4.167vw] font-vollkorn;
+}
+
+.heading-7xl {
+  @apply text-[3rem] lg:text-[5vw] font-vollkorn;
+}
+
+.heading-8xl {
+  @apply text-[3.5rem] lg:text-[6.667vw] font-vollkorn;
+}
+
+.heading-9xl {
+  @apply text-[4rem] lg:text-[8.889vw] font-vollkorn;
+}

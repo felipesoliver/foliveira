@@ -6,20 +6,40 @@ body {
   box-sizing: border-box;
 }
 
-body {
-  @apply antialiased font-manrope;
-}
-
 html {
   @apply scroll-smooth;
 }
 
+body {
+  @apply antialiased font-manrope;
+}
+
+body .grid-graphism,
+body .grid-graphism::before,
+body .grid-graphism::after {
+  @apply fixed top-0 z-[9999] h-screen w-[0.0625rem] bg-[#00000017];
+  pointer-events: none;
+}
+
+body .grid-graphism::before,
+body .grid-graphism::after {
+  content: '';
+}
+
+body .grid-graphism {
+  @apply left-1/2;
+}
+
+body .grid-graphism::before {
+  @apply left-1/4;
+}
+
+body .grid-graphism::after {
+  @apply right-1/4;
+}
+
 @layer components {
   .container {
-    @apply px-4 w-full md:px-8 lg:px-0 mx-auto lg:w-11/12 lg:max-w-[81.25rem];
-  }
-
-  .container-small {
-    @apply px-4 w-full md:px-8 lg:px-0 mx-auto lg:w-10/12 lg:max-w-[67.5rem];
+    @apply px-4 w-full !max-w-none md:px-8 lg:px-[5rem];
   }
 }

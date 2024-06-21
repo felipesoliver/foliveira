@@ -8,8 +8,8 @@ const MainHero = () => {
   const content = data.mainHero
 
   return (
-    <section className='relative lg:h-[50rem]'>
-      <Image className='lg:hidden absolute top-0 left-0 w-full' {...content.bgImageMb} />
+    <section className='relative lg:h-[50rem] pb-10 lg:pb-20 pt-20 lg:pt-28 flex items-center'>
+      <Image className='lg:hidden absolute top-0 left-0 w-full pointer-events-none' {...content.bgImageMb} />
       <Image className='hidden lg:block absolute top-1/2 -translate-y-1/2 left-0 w-full' {...content.bgImage} />
 
       <div className='container relative z-10'>

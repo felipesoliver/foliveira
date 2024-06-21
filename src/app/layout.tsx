@@ -12,7 +12,8 @@ export default async function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${manrope.variable} ${vollkorn.variable}`}>
+      <body className={`${manrope.variable} ${vollkorn.variable} opacity-0 animate-fadein`}>
+        <span className="grid-graphism" />
         <Header/>
         <main>
           {children}

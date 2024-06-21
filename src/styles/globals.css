@@ -9,4 +9,7 @@
 /* Custom  */
 
 @import './default.css';
+@import './typography.css';
 @import './buttons.css';
+@import './hamburger.css';
+@import './header.css';
