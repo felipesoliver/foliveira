@@ -48,6 +48,16 @@ module.exports = {
             transform: 'translateX(0)',
           },
         },
+        fadeup: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-30px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
       },
       animation: {
         fadein: 'fadein .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards',
@@ -57,6 +67,12 @@ module.exports = {
           'fadeleft .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards',
         'fade-left-two':
           'fadeleft .7s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards .4s',
+        'fade-up':
+          'fadeup .4s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards',
+        'fade-up-two':
+          'fadeup .4s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards .3s',
+        'fade-up-three':
+          'fadeup .4s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards .6s',
       },
       fontFamily: {
         manrope: ['var(--font-manrope)', ...fontFamily.sans],

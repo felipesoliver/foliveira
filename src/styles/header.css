@@ -13,5 +13,5 @@
 }
 
 .phrase p {
-  @apply w-fit text-gray opacity-70;
+  @apply w-fit;
 }

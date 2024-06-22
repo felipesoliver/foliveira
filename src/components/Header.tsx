@@ -18,7 +18,7 @@ const Header = () => {
       <NavMenu isMenuActive={isMenuActive} closeNavMenu={closeNavMenu} />
       <header className='header' >
       <div className='header-wrapper container'>
-        <Link href={'/'}>
+        <Link href={'/'} onClick={closeNavMenu}>
           <span className={twMerge('heading-4xl duration-300', isMenuActive ? 'text-white' : 'text-black')}>F.</span>
         </Link>
         <div className={twMerge('phrase', isMenuActive ? 'hidden' : 'hidden lg:flex opacity-0 animate-fade-in-two')}>

@@ -8,16 +8,19 @@ const menuData = [
     text: 'Portfolio',
     url: '/portfolio',
     download: false,
+    transition: 'animate-fade-up',
   },
   {
     text: 'Download CV',
     url: '/cv.pdf',
     download: true,
+    transition: 'animate-fade-up-two',
   },
   {
     text: 'Contact Info',
     url: '/contact',
     download: false,
+    transition: 'animate-fade-up-three',
   },
 ]
 
@@ -33,7 +36,7 @@ const NavMenu: React.FC<Props> = ({
   return (
     <div
       className={twMerge(
-        'nav-menu fixed z-50 w-screen h-screen bg-black duration-300 flex flex-col lg:justify-center py-10 lg:py-20',
+        'nav-menu fixed z-50 w-screen h-screen bg-black duration-300 flex flex-col justify-center py-10 lg:py-20',
         isMenuActive
           ? 'lg:top-0 right-0'
           : 'lg:-top-full -right-full lg:right-0'
@@ -50,7 +53,7 @@ const NavMenu: React.FC<Props> = ({
             {menuData
               ?.map((item: any, index: any) =>
                 (
-                  <li key={`link-${index}`}>
+                  <li className={twMerge('opacity-0', isMenuActive && item.transition)} key={`link-${index}`}>
                     <Link
                       href={item.url}
                       target='_self'
