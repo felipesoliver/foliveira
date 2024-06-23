@@ -12,13 +12,13 @@ const menuData = [
   },
   {
     text: 'Download CV',
-    url: '/cv.pdf',
+    url: './public/cv.pdf',
     download: true,
     transition: 'animate-fade-up-two',
   },
   {
     text: 'Contact Info',
-    url: '/contact',
+    url: '/contact-info',
     download: false,
     transition: 'animate-fade-up-three',
   },
@@ -59,11 +59,11 @@ const NavMenu: React.FC<Props> = ({
                       target='_self'
                       onClick={closeNavMenu}
                       className={twMerge(
-                        'menu-item heading-6xl',
+                        'menu-item',
                       )}
                       download={item.download}
                     >
-                      <span className='heading-5xl text-white'>{item.text}</span>
+                      <span className='block heading-6xl text-white duration-300 lg:translate-x-0 lg:hover:translate-x-8'>{item.text}</span>
                     </Link>
                   </li>
                 )
