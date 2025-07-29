@@ -6,7 +6,8 @@ export const metadata: Metadata = {
   description: 'A web app for my portfolio',
 }
 
-export default function Page() {
+export default async function  Page() {
+
   return (
     <MainHero />
   )

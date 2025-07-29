@@ -4,21 +4,21 @@ import graphismOneMb from '@/assets/images/graphism1mb.png'
 export const data = {
   "mainHero": {
     name: "Hi, I am Felipe Oliveira",
-    role: "Front-End Web Developer",
-    intro: "I'm a front end developer who focuses on writing clean, semantics and efficient code, with experience in programming, development of accessible and responsive web, desktop and mobile applications.",
+    role: "Software Engineer",
+    intro: "I'm a programmer who focuses on writing clean, semantics and efficient code, with experience in development of accessible and responsive web, desktop and mobile applications.",
     links: [
       {
-        url: "/",
+        url: "https://www.behance.net/felipephitcdcd",
         text: "Be",
         blank: true
       },
       {
-        url: "/",
+        url: "https://www.linkedin.com/in/fsoliver/",
         text: "Li",
         blank: true
       },
       {
-        url: "/",
+        url: "https://github.com/felipesoliver",
         text: "Gh",
         blank: true
       }

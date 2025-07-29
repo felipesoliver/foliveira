@@ -41,22 +41,13 @@ const Header = () => {
               F.
             </span>
           </Link>
-          <div
-            className={twMerge(
-              'phrase',
-              isMenuActive && !isScrolled
-                ? 'hidden'
-                : 'hidden lg:flex opacity-0 animate-fade-in-two'
-            )}
-          >
-            <p>me = Person();</p>
-            <p>while(me.awake());</p>
-            <p>me.code();</p>
+          <div className='flex items-center gap-2'>
+            <span className={twMerge('text-lg', isMenuActive ? 'text-white' : 'text-black')}>Menu</span>
+            <Hamburger
+              isMenuActive={isMenuActive}
+              setIsMenuActive={setIsMenuActive}
+            />
           </div>
-          <Hamburger
-            isMenuActive={isMenuActive}
-            setIsMenuActive={setIsMenuActive}
-          />
         </div>
       </header>
     </>
