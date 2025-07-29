@@ -1,7 +1,7 @@
 /* Header */
 
 .header {
-  @apply fixed top-0 left-0 z-[9999] w-full h-20 flex items-center border-b;
+  @apply fixed top-0 left-0 z-[9999] w-full h-20 flex items-center border-b border-gray/30;
 }
 
 .header-wrapper {

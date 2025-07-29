@@ -26,8 +26,8 @@ const Header = () => {
       <NavMenu isMenuActive={isMenuActive} closeNavMenu={closeNavMenu} />
       <header
         className={twMerge(
-          'header duration-300 transition-[cubic-bezier(0.455, 0.03, 0.515, 0.955)]',
-          isScrolled && !isMenuActive ? 'lg:h-28' : 'lg:h-[8.125rem]'
+          'header duration-300 transition-[cubic-bezier(0.455, 0.03, 0.515, 0.955)] transition-all',
+          isScrolled && !isMenuActive ? 'lg:h-28 backdrop-blur-md bg-white/50' : 'lg:h-[8.125rem] backdrop-blur-none'
         )}
       >
         <div className="header-wrapper container">
