@@ -17,7 +17,7 @@ body {
 body .grid-graphism,
 body .grid-graphism::before,
 body .grid-graphism::after {
-  @apply fixed top-0 z-[9999] h-screen w-[0.0625rem] bg-[#00000017];
+  @apply fixed top-0 h-screen w-[0.0625rem] bg-gray/20;
   pointer-events: none;
 }
 

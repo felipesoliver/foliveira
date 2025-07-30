@@ -1,3 +1,4 @@
+import Main from '@/components/Main'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -6,5 +7,9 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <h1 className='heading-7xl'>Get in touch</h1>
+  return (
+    <Main theme='light'>
+      <h1 className='heading-7xl'>Get in touch</h1>
+    </Main>
+  )
 }

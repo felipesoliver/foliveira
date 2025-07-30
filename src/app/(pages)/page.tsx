@@ -1,3 +1,4 @@
+import Main from '@/components/Main'
 import MainHero from '@/components/MainHero'
 import { Metadata } from 'next'
 
@@ -6,8 +7,10 @@ export const metadata: Metadata = {
   description: 'A web app for my portfolio',
 }
 
-export default async function  Page() {
+export default function  Page() {
   return (
-    <MainHero />
+    <Main theme='light'>
+      <MainHero />
+    </Main>
   )
 }
