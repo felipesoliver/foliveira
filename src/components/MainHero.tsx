@@ -5,6 +5,7 @@ import { data } from '@/api/homepage'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import Cta from './Cta'
 
 const MainHero = () => {
   const content = data.mainHero
@@ -38,14 +39,22 @@ const MainHero = () => {
           </ul>
         </motion.div>
         <motion.div
-          className='flex flex-col justify-center gap-2 lg:pl-5'
+          className='flex flex-col justify-center gap-5 md:gap-8'
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
           viewport={{ root: scrollRef }}
         >
-          <span className='block w-8 h-[0.125rem] bg-black'/>
-          <p className='lg:text-xl 2xl:text-2xl lg:w-1/2'>{content.intro}</p>
+          <div className='flex flex-col justify-center gap-2 lg:pl-5'>
+            <span className='block w-8 h-[0.125rem] bg-black'/>
+            <p className='lg:text-xl 2xl:text-2xl lg:w-1/2'>{content.intro}</p>
+          </div>
+          <Cta
+            text={content.cta.text}
+            url={content.cta.url}
+            blank={content.cta.blank}
+            variant='dark'
+          />
         </motion.div>
       </div>
     </section>

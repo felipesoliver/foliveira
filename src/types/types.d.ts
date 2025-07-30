@@ -19,6 +19,14 @@ export interface ILink {
   blank: boolean
 }
 
+export interface ICta {
+  text: string
+  url?: string
+  blank?: boolean
+  className?: string
+  variant: 'light' | 'dark'
+}
+
 interface IMeta {
   title: string
   description: string

@@ -1,9 +1,11 @@
-module.exports = {
-  typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
-    ignoreBuildErrors: true,
+const withSvgr = require('next-plugin-svgr');
+
+const nextConfig = {
+  reactStrictMode: true,
+  svgrOptions: {
+    titleProp: true,
+    icon: true,
   },
 };
+
+module.exports = withSvgr(nextConfig);

@@ -3,7 +3,7 @@ import graphismOneMb from '@/assets/images/graphism1mb.png'
 
 export const data = {
   "mainHero": {
-    name: "Hi, I am Felipe Oliveira",
+    name: "Hey there, I am Felipe Oliveira",
     role: "Software Engineer",
     intro: "I'm a programmer who focuses on writing clean, semantics and efficient code, with experience in development of accessible and responsive web, desktop and mobile applications.",
     links: [
@@ -34,6 +34,12 @@ export const data = {
       width: 1440,
       height: 886,
       alt: "Background Image",
+    },
+    'cta': {
+      text: 'Take a look on my recent work',
+      url: '/portfolio',
+      blank: false,
+      variant: 'dark'
     }
   }
 }

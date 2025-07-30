@@ -1,14 +1,13 @@
-import type { Metadata } from "next";
-import "@/styles/globals.css";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import { manrope, vollkorn } from "./fonts";
+import "@/styles/globals.css"
+import { manrope, vollkorn } from "./fonts"
+import Header from "@/components/Header"
+import Footer from "@/components/Footer"
 
 
 export default async function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang='en'>
@@ -21,5 +20,5 @@ export default async function RootLayout({
         <Footer/>
       </body>
     </html>
-  );
+  )
 }
