@@ -1,8 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Main from '@/components/Main'
-import useStateController from '@/hooks/use-state-controller'
+import MediumHero from '@/components/MediumHero'
 import { Metadata } from 'next'
-import { useEffect } from 'react'
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -10,10 +9,9 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-
   return (
     <Main theme='dark'>
-      <h1 className='heading-7xl'>Portfolio</h1>
+      <MediumHero />
     </Main>
   )
 }

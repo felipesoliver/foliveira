@@ -1,62 +1,45 @@
 'use client'
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useRef } from 'react'
-import { data } from '@/api/homepage'
-import Image from 'next/image'
-import Link from 'next/link'
+import { data } from '@/api/portfolio'
 import { motion } from 'framer-motion'
-import Cta from './Cta'
+
+import ScrollDown from '@/assets/icons/scroll-down.svg'
 
 const MediumHero = () => {
-  const content = data.mainHero
+  const content = data.mediumHero
   const scrollRef = useRef(null)
 
   return (
     <section className='main-hero relative z-10 h-screen lg:h-[50rem] lg:min-h-screen pb-10 lg:pb-20 pt-20 lg:pt-28 flex items-center' ref={scrollRef}>
-      <Image className='lg:hidden absolute top-0 left-0 w-full pointer-events-none' {...content.bgImageMb} />
-      <Image className='hidden lg:block absolute top-1/2 -translate-y-1/2 left-0 w-full' {...content.bgImage} />
-      <div className='container grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-0 z-10'>
+      <div className='container grid grid-cols-1 lg:grid-cols-4 gap-5 lg:gap-0 z-10'>
         <motion.div
-          className='relative flex flex-col gap-5'
+          className='relative flex flex-col gap-5 text-white lg:col-span-3'
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ root: scrollRef }}
         >
-          <div className='flex items-center gap-4'>
-            <span className='w-8 h-[0.125rem] bg-black'/>
-            <span className='lg:text-lg'>{content.name}</span>
+          <h1 className='text-5xl lg:text-[4.92vw] font-vollkorn font-extralight'>{content.title}</h1>
+          <div className='flex flex-col justify-center gap-2'>
+            <span className='block w-8 h-[0.125rem] bg-white'/>
+            <p className='lg:text-xl 2xl:text-2xl lg:w-1/2'>{content.description}</p>
           </div>
-          <h1 className='text-7xl lg:text-[7.92vw] font-vollkorn font-extralight'>{content.role}</h1>
-          <ul className='flex gap-4 lg:absolute lg:-bottom-24 lg:left-0 lg:-rotate-90 lg:-translate-x-1/2'>
-            <li className='font-bold'>Follow</li>
-            {content.links.length > 0 &&
-              content.links.map((link, index) => (
-                <li className='transition-all duration-200 hover:text-purple' key={`link-${index}`}>
-                  <Link href={link.url} target={link.blank ? '_blank' : ''}>{link.text}</Link>
-                </li>
-              ))
-            }
-          </ul>
-        </motion.div>
-        <motion.div
-          className='flex flex-col justify-center gap-5 md:gap-8'
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          viewport={{ root: scrollRef }}
-        >
-          <div className='flex flex-col justify-center gap-2 lg:pl-5'>
-            <span className='block w-8 h-[0.125rem] bg-black'/>
-            <p className='lg:text-xl 2xl:text-2xl lg:w-1/2'>{content.intro}</p>
-          </div>
-          <Cta
-            text={content.cta.text}
-            url={content.cta.url}
-            blank={content.cta.blank}
-            variant='dark'
-          />
         </motion.div>
       </div>
+      <motion.button
+        className='group hidden lg:block absolute bottom-20 left-1/2 -translate-x-1/2'
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ root: scrollRef }}
+        transition={{
+          delay: 0.5,
+          duration: 0.7
+        }}
+      >
+        <ScrollDown className='w-28 h-28 animate-hour-rotation' />
+        <span className='absolute top-[4.25rem] left-1/2 -translate-x-1/2 w-[0.0625rem] h-[0.0625rem] group-hover:h-[5rem] bg-white duration-500 ease-linear transition-all opacity-60' />
+        <span className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block w-5 h-5 border-l border-b border-white -rotate-45 duration-500 ease-linear transition-all group-hover:top-[8.5rem]' />
+      </motion.button>
     </section>
   )
 }

@@ -58,6 +58,14 @@ module.exports = {
             transform: 'translateY(0)',
           },
         },
+        hourrotation: {
+          '0%': {
+            transform: 'rotate(0deg)',
+          },
+          '100%': {
+            transform: 'rotate(360deg)',
+          },
+        }
       },
       animation: {
         fadein: 'fadein .5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards',
@@ -73,6 +81,8 @@ module.exports = {
           'fadeup .4s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards .3s',
         'fade-up-three':
           'fadeup .4s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards .6s',
+        'hour-rotation':
+          'hourrotation 8s linear infinite',
       },
       fontFamily: {
         manrope: ['var(--font-manrope)', ...fontFamily.sans],
